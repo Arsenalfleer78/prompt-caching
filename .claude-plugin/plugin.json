@@ -12,5 +12,6 @@
       "command": "npx",
       "args": ["-y", "prompt-caching-mcp"]
     }
-  }
+  },
+  "hooks": "./hooks/"
 }
