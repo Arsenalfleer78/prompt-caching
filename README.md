@@ -137,6 +137,8 @@ Cache creation costs 1.25× normal. Cache reads cost 0.1×. Break-even at turn 2
 
 ## Installation
 
+> **Note:** This plugin is pending approval in the official Claude Code plugin marketplace. In the meantime, you can install it directly from GitHub using the commands below.
+
 ### Claude Code — two commands
 
 ```
