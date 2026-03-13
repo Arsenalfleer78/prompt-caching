@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "prompt-caching",
+  "name": "ercan-ermis",
   "owner": {
     "name": "Ercan Ermis",
     "email": "eposta@ercanermis.com"
@@ -30,7 +30,7 @@
         "prompt-caching",
         "token-optimization"
       ],
-      "homepage": "https://flightlesstux.github.io/prompt-caching/",
+      "homepage": "https://prompt-caching.ai/",
       "repository": "https://github.com/flightlesstux/prompt-caching"
     }
   ]
