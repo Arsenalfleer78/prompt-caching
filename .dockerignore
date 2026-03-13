@@ -1,5 +1,4 @@
-# Source not needed in image — compiled by builder stage
-src/
+# Static site files not needed in image
 docs/
 coverage/
 
