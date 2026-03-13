@@ -137,10 +137,11 @@ Cache creation costs 1.25× normal. Cache reads cost 0.1×. Break-even at turn 2
 
 ## Installation
 
-### Claude Code — one command
+### Claude Code — two commands
 
 ```
-/plugin install flightlesstux/prompt-caching
+/plugin marketplace add https://github.com/flightlesstux/prompt-caching
+/plugin install prompt-caching@ercan-ermis
 ```
 
 That's it. No npm, no config file, no restart. Claude Code's plugin system handles everything automatically.

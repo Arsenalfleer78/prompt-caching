@@ -125,9 +125,10 @@
             <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
             <span class="code-title">Claude Code</span>
           </div>
-          <pre><code><span class="c-comment"># One command. That's it.</span>
+          <pre><code><span class="c-comment"># Two commands. That's it.</span>
 
-<span class="c-str">/plugin install flightlesstux/prompt-caching</span>
+<span class="c-str">/plugin marketplace add https://github.com/flightlesstux/prompt-caching</span>
+<span class="c-str">/plugin install prompt-caching@ercan-ermis</span>
 
 <span class="c-comment"># No npm. No config file. No restart.</span>
 <span class="c-comment"># Savings start on the next turn.</span></code></pre>
@@ -271,8 +272,9 @@
           </div>
           <div class="install-card">
             <div class="install-card-body">
-              <p>Run this inside Claude Code — no npm, no config file, no restart needed:</p>
-              <pre><code><span class="c-str">/plugin install flightlesstux/prompt-caching</span></code></pre>
+              <p>Run these inside Claude Code — no npm, no config file, no restart needed:</p>
+              <pre><code><span class="c-str">/plugin marketplace add https://github.com/flightlesstux/prompt-caching</span>
+<span class="c-str">/plugin install prompt-caching@ercan-ermis</span></code></pre>
               <p class="install-note">Claude Code's plugin system handles everything automatically. The <code>get_cache_stats</code> tool is available immediately after install.</p>
             </div>
           </div>
