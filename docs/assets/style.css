@@ -755,6 +755,41 @@ h2 em { font-style: normal; color: var(--forest2); }
 }
 .footer-links a:hover { color: var(--forest); text-decoration: none; }
 
+/* ── FAQ ──────────────────────────────────────────────────── */
+.faq-list { display: flex; flex-direction: column; gap: 2px; max-width: 800px; margin: 0 auto; }
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 12px;
+}
+.faq-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.faq-item p {
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+.faq-item p:last-child { margin-bottom: 0; }
+.faq-item a { color: var(--lime); text-decoration: underline; }
+.faq-item a:hover { color: var(--forest); }
+.faq-item code {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: var(--forest);
+}
+
 /* ── RESPONSIVE ───────────────────────────────────────────── */
 @media (max-width: 900px) {
   .hero-layout { grid-template-columns: 1fr; gap: 56px; }

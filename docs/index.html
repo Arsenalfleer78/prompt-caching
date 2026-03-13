@@ -96,6 +96,7 @@
         <a href="#how-it-works">How it works</a>
         <a href="#benchmarks">Benchmarks</a>
         <a href="#install">Install</a>
+        <a href="#faq">FAQ</a>
         <a href="https://github.com/flightlesstux/prompt-caching" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
@@ -308,6 +309,69 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>FAQ</h2>
+        <p class="section-sub">Common questions — especially the skeptical ones.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3>"Claude Code already does prompt caching automatically — why does this exist?"</h3>
+          <p>
+            You're right, and it's a fair question. Claude Code does handle prompt caching automatically for its own API calls — system prompts, tool definitions, and conversation history are cached out of the box. You don't need this plugin for that.
+          </p>
+          <p>
+            This plugin is for a different layer: <strong>when you build your own apps or agents with the Anthropic SDK</strong>. Raw SDK calls don't get automatic caching unless you place <code>cache_control</code> breakpoints yourself. This plugin does that automatically, plus gives you visibility into what's being cached, hit rates, and real savings — which Claude Code doesn't expose.
+          </p>
+          <p>
+            Short version: Claude Code using the API → already cached ✅ &nbsp; Your app calling the API → this plugin handles it ✅
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>"Hasn't Anthropic's new auto-caching feature solved this?"</h3>
+          <p>
+            Largely, yes — Anthropic's automatic caching (passing <code>"cache_control": {"type": "ephemeral"}</code> at the top level) handles breakpoint placement automatically now. This plugin predates that feature and originally filled that gap.
+          </p>
+          <p>
+            What it still adds: <strong>observability</strong>. <code>get_cache_stats</code> tracks hit rate and cumulative savings across turns. <code>analyze_cacheability</code> lets you dry-run a prompt to see exactly what would be cached and where breakpoints land — useful when debugging why you're getting cache misses. If you just want set-and-forget, Anthropic's auto-caching is enough.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>"I checked ccusage and my cache reads are already huge. Does this help me?"</h3>
+          <p>
+            If you're seeing high cache reads in Claude Code, that's the built-in caching working perfectly — this plugin won't improve those numbers further. It can't intercept Claude Code's own API calls.
+          </p>
+          <p>
+            It would help you if you're also running your own scripts or agents via the Anthropic SDK alongside Claude Code. Those calls are separate and don't benefit from Claude Code's automatic caching.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>"Which models support prompt caching?"</h3>
+          <p>
+            Claude Opus 4.6/4.5/4.1/4, Sonnet 4.6/4.5/4/3.7, Haiku 4.5, Haiku 3.5, and Haiku 3.
+            Minimum cacheable prompt size varies by model (1024–4096 tokens). See the
+            <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching#pricing" target="_blank" rel="noopener noreferrer">official pricing table</a> for full details.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>"What's the cache lifetime?"</h3>
+          <p>
+            5 minutes by default (ephemeral), extended for free on every cache hit. A 1-hour TTL is also available at 2× the base input token price — useful for long-running agents or infrequent sessions.
+            See <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" target="_blank" rel="noopener noreferrer">Anthropic's prompt caching docs</a> for the full breakdown.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
