@@ -9,11 +9,21 @@
   "homepage": "https://prompt-caching.ai",
   "repository": "https://github.com/flightlesstux/prompt-caching",
   "license": "MIT",
-  "keywords": ["caching", "tokens", "cost", "anthropic", "mcp", "performance"],
+  "keywords": [
+    "caching",
+    "tokens",
+    "cost",
+    "anthropic",
+    "mcp",
+    "performance"
+  ],
   "mcpServers": {
     "prompt-caching-mcp": {
       "command": "npx",
-      "args": ["-y", "prompt-caching-mcp"]
+      "args": [
+        "-y",
+        "prompt-caching-mcp"
+      ]
     }
   }
 }
